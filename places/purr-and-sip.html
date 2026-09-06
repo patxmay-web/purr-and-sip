@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cozy Paws Café | Purr & Sip</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background-color: #fff8f2;
+            color: #4a3728;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #6f4e37;
+            color: white;
+            text-align: center;
+            padding: 50px 20px 30px;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin: 0 0 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            margin: 0 0 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 5px 10px;
+            transition: all 0.2s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background-color: #fff8f2;
+            color: #6f4e37;
+            border-radius: 6px;
+        }
+
+        main {
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .place-section {
+            background-color: white;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 35px;
+        }
+
+        .place-section h2 {
+            color: #6f4e37;
+            font-size: 30px;
+            margin-top: 0;
+        }
+
+        .place-section h3 {
+            color: #6f4e37;
+            font-size: 23px;
+        }
+
+        .details {
+            padding-left: 20px;
+        }
+
+        .details li {
+            margin-bottom: 10px;
+        }
+
+        /* Suggest-a-Place Form */
+
+        .suggest-section {
+            background-color: white;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .suggest-section h2 {
+            color: #6f4e37;
+            font-size: 30px;
+            margin-top: 0;
+        }
+
+        .suggest-section p {
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px;
+            border: 1px solid #cbb8a7;
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: #fff8f2;
+            color: #4a3728;
+        }
+
+        fieldset {
+            border: 1px solid #cbb8a7;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #6f4e37;
+            padding: 0 8px;
+        }
+
+        .choice {
+            margin-bottom: 10px;
+        }
+
+        .choice label {
+            display: inline;
+            font-weight: normal;
+            margin-left: 5px;
+        }
+
+        .good-points {
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #6f4e37;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #4a3728;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 25px;
+            color: #6f4e37;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #4a3728;
+            color: white;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🐾 Purr & Sip ☕</h1>
+
+        <p>
+            A cozy guide to cat cafés where good coffee comes
+            with friendly feline company.
+        </p>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Place Information -->
+
+        <section class="place-section">
+
+            <h2>🐱 Cozy Paws Café</h2>
+
+            <p>
+                Cozy Paws Café is a relaxing cat café where visitors
+                can enjoy drinks while spending time with friendly cats.
+                It is a great place to unwind, study, or simply enjoy
+                the company of adorable feline friends.
+            </p>
+
+            <h3>Why Visit?</h3>
+
+            <ul class="details">
+                <li>🐾 Friendly and playful cats</li>
+                <li>☕ Cozy coffee shop atmosphere</li>
+                <li>📚 Suitable for relaxing and studying</li>
+                <li>📶 Good Wi-Fi</li>
+                <li>💰 Affordable drinks and snacks</li>
+            </ul>
+
+            <h3>What to Expect</h3>
+
+            <p>
+                Visitors can enjoy a peaceful café environment while
+                interacting with cats. Guests are encouraged to respect
+                the cats' space and follow the café's animal welfare rules.
+            </p>
+
+            <a class="back-link" href="../index.html">
+                ← Back to Home
+            </a>
+
+        </section>
+
+
+        <!-- Module 4 Suggest-a-Place Form -->
+
+        <section class="suggest-section">
+
+            <h2>🐾 Suggest a Place</h2>
+
+            <p>
+                Know a cozy café or interesting place that should be
+                included in Purr & Sip? Send us your recommendation!
+            </p>
+
+            <form>
+
+                <!-- Required Text Input -->
+
+                <div class="form-group">
+
+                    <label for="place-name">
+                        Place name:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="place-name"
+                        name="place-name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Radio Buttons -->
+
+                <fieldset>
+
+                    <legend>
+                        What category is the place?
+                    </legend>
+
+                    <div class="choice">
+
+                        <input
+                            type="radio"
+                            id="food"
+                            name="category"
+                            value="food"
+                        >
+
+                        <label for="food">
+                            Food
+                        </label>
+
+                    </div>
+
+                    <div class="choice">
+
+                        <input
+                            type="radio"
+                            id="study"
+                            name="category"
+                            value="study"
+                        >
+
+                        <label for="study">
+                            Study Spot
+                        </label>
+
+                    </div>
+
+                    <div class="choice">
+
+                        <input
+                            type="radio"
+                            id="outdoors"
+                            name="category"
+                            value="outdoors"
+                        >
+
+                        <label for="outdoors">
+                            Outdoors
+                        </label>
+
+                    </div>
+
+                </fieldset>
+
+
+                <!-- Checkboxes -->
+
+                <fieldset class="good-points">
+
+                    <legend>
+                        What's good about it?
+                    </legend>
+
+                    <div class="choice">
+
+                        <input
+                            type="checkbox"
+                            id="affordable"
+                            name="good"
+                            value="affordable"
+                        >
+
+                        <label for="affordable">
+                            Affordable
+                        </label>
+
+                    </div>
+
+                    <div class="choice">
+
+                        <input
+                            type="checkbox"
+                            id="wifi"
+                            name="good"
+                            value="wifi"
+                        >
+
+                        <label for="wifi">
+                            Good Wi-Fi
+                        </label>
+
+                    </div>
+
+                    <div class="choice">
+
+                        <input
+                            type="checkbox"
+                            id="quiet"
+                            name="good"
+                            value="quiet"
+                        >
+
+                        <label for="quiet">
+                            Quiet
+                        </label>
+
+                    </div>
+
+                </fieldset>
+
+
+                <!-- Required Email -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Contact email:
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Submit Button -->
+
+                <button type="submit">
+                    Suggest Place
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>🐱 Purr & Sip &middot; Created by Patricia May &middot; 2026</p>
+    </footer>
+
+</body>
+
+</html>

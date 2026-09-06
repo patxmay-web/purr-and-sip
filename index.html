@@ -20,7 +20,7 @@
             background-color: #6f4e37;
             color: white;
             text-align: center;
-            padding: 50px 20px;
+            padding: 50px 20px 30px;
         }
 
         header h1 {
@@ -30,74 +30,82 @@
 
         header p {
             font-size: 18px;
+            margin: 0 0 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
             margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 5px 10px;
+            transition: all 0.2s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background-color: #fff8f2;
+            color: #6f4e37;
+            border-radius: 6px;
         }
 
         main {
-            max-width: 850px;
+            max-width: 900px;
             margin: 40px auto;
             padding: 0 20px;
         }
 
         .intro {
-            background-color: white;
-            padding: 30px;
-            border-radius: 18px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
             text-align: center;
+            margin-bottom: 40px;
         }
 
         .intro h2 {
             color: #6f4e37;
-            font-size: 28px;
+            font-size: 32px;
         }
 
-        section {
-            margin-top: 30px;
+        .places {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
 
-        section h2 {
-            color: #6f4e37;
-        }
-
-        .owner {
-            background-color: #f8e4dc;
-            padding: 30px;
-            border-radius: 18px;
-            text-align: center;
-        }
-
-        .owner img {
-            width: 180px;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin-top: 15px;
-            border: 5px solid white;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        /* Places Section Styling */
-        .places article {
+        .place-card {
             background-color: white;
             padding: 25px;
             border-radius: 18px;
-            margin-top: 20px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
         }
 
-        .places h3 {
+        .place-card h3 {
             color: #6f4e37;
             margin-top: 0;
-            margin-bottom: 5px;
+            font-size: 24px;
         }
 
-        .places img {
-            width: 100%;
-            max-height: 300px;
-            object-fit: cover;
-            border-radius: 12px;
+        .place-card a {
+            display: inline-block;
+            background-color: #6f4e37;
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 8px;
             margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .place-card a:hover {
+            background-color: #4a3728;
         }
 
         footer {
@@ -119,64 +127,41 @@
             A cozy guide to cat cafés where good coffee comes
             with friendly feline company.
         </p>
+
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
 
         <section class="intro">
-            <h2>Welcome to Purr & Sip!</h2>
+            <h2>Discover Cozy Cat Cafés</h2>
 
             <p>
-                Discover cozy coffee shops where you can enjoy
-                delicious drinks, relax, and spend time with
-                friendly cats.
-            </p>
-
-            <p>
-                This guide highlights cat-friendly cafés and
-                relaxing places that are perfect for coffee
-                lovers and cat enthusiasts.
+                Welcome to Purr & Sip! Explore relaxing cat cafés
+                where you can enjoy a drink, meet adorable cats,
+                and spend time in a cozy environment.
             </p>
         </section>
 
-        <section class="owner">
-            <h2>About Me</h2>
-
-            <p>
-                Hi! I'm Patricia May, a college student who loves
-                cats, cozy cafés, and discovering relaxing places.
-                I created Purr & Sip to share places where people
-                can enjoy a cup of coffee while spending time
-                with adorable and friendly cats.
-            </p>
-
-            <img src="owner.jpg" alt="Photo of Patricia May">
-        </section>
-
-        <!-- NEW PLACES SECTION FOR THE ACTIVITY -->
         <section class="places">
-            <h2>My Top Picks</h2>
 
-            <article>
-                <h3>Catopia Café</h3>
-                <p>Location: Quezon City</p>
-                <p>I recommend this place because of its calm atmosphere, cozy seating, and friendly rescue cats that love cuddling while you enjoy your coffee.</p>
-                <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=500" alt="A cute cat resting on a wooden café table">
+            <article class="place-card">
+                <h3>🐱 Cozy Paws Café</h3>
+
+                <p>
+                    A relaxing cat café perfect for coffee lovers
+                    and anyone who enjoys spending time with friendly cats.
+                </p>
+
+                <a href="places/cat-cafe.html">View Place</a>
             </article>
 
-            <article>
-                <h3>The Pawsome Lounge</h3>
-                <p>Location: Makati City</p>
-                <p>A great spot for studying or relaxing. They have delicious pastries, great iced lattes, and very energetic kitties that bring a lot of joy.</p>
-                <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=500" alt="A fluffy cat sitting comfortably inside a modern coffee shop">
-            </article>
-
-            <article>
-                <h3>Whiskers & Brews</h3>
-                <p>Location: Pasig City</p>
-                <p>Perfect for coffee lovers and cat lovers alike. The staff is welcoming, the coffee is top quality, and the cats are extremely well cared for.</p>
-                <img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?w=500" alt="A friendly cat looking directly at the camera in a cozy café setting">
-            </article>
         </section>
 
     </main>
