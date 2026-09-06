@@ -64,7 +64,8 @@
             padding: 0 20px;
         }
 
-        .place-section {
+        .place-section,
+        .suggest-section {
             background-color: white;
             padding: 35px;
             border-radius: 18px;
@@ -72,7 +73,8 @@
             margin-bottom: 35px;
         }
 
-        .place-section h2 {
+        .place-section h2,
+        .suggest-section h2 {
             color: #6f4e37;
             font-size: 30px;
             margin-top: 0;
@@ -91,20 +93,7 @@
             margin-bottom: 10px;
         }
 
-        /* Suggest-a-Place Form */
-
-        .suggest-section {
-            background-color: white;
-            padding: 35px;
-            border-radius: 18px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-        }
-
-        .suggest-section h2 {
-            color: #6f4e37;
-            font-size: 30px;
-            margin-top: 0;
-        }
+        /* Form */
 
         .suggest-section p {
             margin-bottom: 25px;
@@ -155,10 +144,6 @@
             margin-left: 5px;
         }
 
-        .good-points {
-            margin-bottom: 20px;
-        }
-
         button {
             background-color: #6f4e37;
             color: white;
@@ -176,7 +161,7 @@
 
         .back-link {
             display: inline-block;
-            margin-top: 25px;
+            margin-top: 10px;
             color: #6f4e37;
             font-weight: bold;
             text-decoration: none;
@@ -199,6 +184,7 @@
 <body>
 
     <header>
+
         <h1>🐾 Purr & Sip ☕</h1>
 
         <p>
@@ -213,11 +199,12 @@
                 <li><a href="../contact.html">Contact</a></li>
             </ul>
         </nav>
+
     </header>
 
     <main>
 
-        <!-- Place Information -->
+        <!-- Place Details -->
 
         <section class="place-section">
 
@@ -255,7 +242,7 @@
         </section>
 
 
-        <!-- Module 4 Suggest-a-Place Form -->
+        <!-- MODULE 4: SUGGEST-A-PLACE FORM -->
 
         <section class="suggest-section">
 
@@ -268,7 +255,7 @@
 
             <form>
 
-                <!-- Required Text Input -->
+                <!-- Place Name -->
 
                 <div class="form-group">
 
@@ -286,7 +273,7 @@
                 </div>
 
 
-                <!-- Radio Buttons -->
+                <!-- Category: Radio Buttons -->
 
                 <fieldset>
 
@@ -342,9 +329,9 @@
                 </fieldset>
 
 
-                <!-- Checkboxes -->
+                <!-- What's Good: Checkboxes -->
 
-                <fieldset class="good-points">
+                <fieldset>
 
                     <legend>
                         What's good about it?
@@ -398,7 +385,7 @@
                 </fieldset>
 
 
-                <!-- Required Email -->
+                <!-- Contact Email -->
 
                 <div class="form-group">
 
@@ -416,7 +403,7 @@
                 </div>
 
 
-                <!-- Submit Button -->
+                <!-- Submit -->
 
                 <button type="submit">
                     Suggest Place
