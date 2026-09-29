@@ -1,180 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Purr & Sip | Cat Café Guide</title>
-
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-            background-color: #fff8f2;
-            color: #4a3728;
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: #6f4e37;
-            color: white;
-            text-align: center;
-            padding: 50px 20px 30px;
-        }
-
-        header h1 {
-            font-size: 48px;
-            margin: 0 0 10px;
-        }
-
-        header p {
-            font-size: 18px;
-            margin: 0 0 20px;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-            padding: 5px 10px;
-            transition: all 0.2s;
-        }
-
-        nav a:hover,
-        nav a.active {
-            background-color: #fff8f2;
-            color: #6f4e37;
-            border-radius: 6px;
-        }
-
-        main {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .intro {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .intro h2 {
-            color: #6f4e37;
-            font-size: 32px;
-        }
-
-        .places {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .place-card {
-            background-color: white;
-            padding: 25px;
-            border-radius: 18px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-        }
-
-        .place-card h3 {
-            color: #6f4e37;
-            margin-top: 0;
-            font-size: 24px;
-        }
-
-        .place-card a {
-            display: inline-block;
-            background-color: #6f4e37;
-            color: white;
-            text-decoration: none;
-            padding: 10px 18px;
-            border-radius: 8px;
-            margin-top: 10px;
-            font-weight: bold;
-        }
-
-        .place-card a:hover {
-            background-color: #4a3728;
-        }
-
-        footer {
-            text-align: center;
-            background-color: #4a3728;
-            color: white;
-            padding: 20px;
-            margin-top: 50px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="page">
+        <!-- MASTHEAD -->
+        <header>
+            <h1>🐾 Purr & Sip ☕</h1>
+            <p>A cozy guide to cat cafés where good coffee comes with friendly feline company.</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <header>
-        <h1>🐾 Purr & Sip ☕</h1>
+        <!-- SIDEBAR (TASK 3 REQUIREMENT) -->
+        <aside>
+            <div class="sidebar-card">
+                <h3>🐾 Quick Tip</h3>
+                <p>Always move gently around cats and let them approach you first for cuddles!</p>
+            </div>
+            <div class="sidebar-card">
+                <h3>☕ How We Choose</h3>
+                <ul>
+                    <li>✨ Ethical animal welfare</li>
+                    <li>🧹 Clean & peaceful vibe</li>
+                    <li>☕ Delicious drinks & Wi-Fi</li>
+                </ul>
+            </div>
+        </aside>
 
-        <p>
-            A cozy guide to cat cafés where good coffee comes
-            with friendly feline company.
-        </p>
-
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-
-        <section class="intro">
-            <h2>Discover Cozy Cat Cafés</h2>
-
-            <p>
-                Welcome to Purr & Sip! Explore relaxing cat cafés
-                where you can enjoy a drink, meet adorable cats,
-                and spend time in a cozy environment.
-            </p>
-        </section>
-
-        <section class="places">
-
-            <article class="place-card">
-
-                <h3>🐱 Cozy Paws Café</h3>
-
+        <!-- MAIN CONTENT -->
+        <main>
+            <section class="intro">
+                <h2>Discover Cozy Cat Cafés</h2>
                 <p>
-                    A relaxing cat café perfect for coffee lovers
-                    and anyone who enjoys spending time with friendly cats.
+                    Welcome to Purr & Sip! Explore relaxing cat cafés
+                    where you can enjoy a drink, meet adorable cats,
+                    and spend time in a cozy environment.
                 </p>
+            </section>
+            <section class="places">
+                <article class="place-card">
+                    <h3>🐱 Cozy Paws Café</h3>
+                    <p>
+                        A relaxing cat café perfect for coffee lovers
+                        and anyone who enjoys spending time with friendly cats.
+                    </p>
+                    <a href="places/purr-and-sip.html">View Place</a>
+                </article>
+            </section>
+        </main>
 
-                <!-- Correct link to the places folder -->
-                <a href="places/purr-and-sip.html">
-                    View Place
-                </a>
-
-            </article>
-
-        </section>
-
-    </main>
-
-    <footer>
-        <p>🐱 Purr & Sip &middot; Created by Patricia May &middot; 2026</p>
-    </footer>
-
+        <!-- FOOTER -->
+        <footer>
+            <p>🐱 Purr & Sip &middot; Created by Patricia May &middot; 2026</p>
+        </footer>
+    </div>
 </body>
-
 </html>

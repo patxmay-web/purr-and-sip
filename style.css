@@ -1,0 +1,377 @@
+/* =========================================================
+   1. VARIABLES & THEME SETUP (Cutesy Warm Cat Theme)
+   ========================================================= */
+:root {
+    --bg-cream: #fff9f2;
+    --card-bg: #ffffff;
+    --primary-brown: #8b5a2b;
+    --soft-brown: #a06c3f;
+    --accent-pink: #f4c2b8;
+    --accent-peach: #fce8e3;
+    --text-dark: #4a3427;
+    --border-soft: #f0dcd3;
+    --shadow-soft: 0 8px 20px rgba(139, 90, 43, 0.08);
+    --radius-main: 20px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-cream);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--primary-brown);
+}
+
+/* =========================================================
+   2. PAGE SKELETON (TASK 3 & TASK 4: MOBILE-FIRST GRID)
+   ========================================================= */
+
+/* Base Layout (Mobile First): Single column stacked */
+.page {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "masthead"
+        "main"
+        "side"
+        "foot";
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* Region Assignments */
+header { grid-area: masthead; }
+aside  { grid-area: side; }
+main   { grid-area: main; }
+footer { grid-area: foot; }
+
+/* Enhance at Tablet and Up (min-width: 700px) */
+@media (min-width: 700px) {
+    .page {
+        grid-template-columns: 220px 1fr;
+        grid-template-areas:
+            "masthead masthead"
+            "side     main"
+            "foot     foot";
+        padding: 30px 20px;
+        gap: 24px;
+    }
+}
+
+/* =========================================================
+   3. COMPONENTS & STYLES
+   ========================================================= */
+
+/* Header (Uses Flexbox for Nav Component) */
+header {
+    background-color: var(--primary-brown);
+    background-image: linear-gradient(135deg, var(--primary-brown), var(--soft-brown));
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    border-radius: var(--radius-main);
+    box-shadow: var(--shadow-soft);
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0 0 8px;
+    letter-spacing: 0.5px;
+}
+
+header p {
+    font-size: 16px;
+    margin: 0 0 20px;
+    opacity: 0.95;
+}
+
+/* Flexbox Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.25s ease;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: var(--bg-cream);
+    color: var(--primary-brown);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar (<aside>) */
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.sidebar-card {
+    background-color: var(--card-bg);
+    padding: 22px;
+    border-radius: var(--radius-main);
+    box-shadow: var(--shadow-soft);
+    border: 2px solid var(--border-soft);
+}
+
+.sidebar-card h3 {
+    color: var(--primary-brown);
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 18px;
+    border-bottom: 2px dashed var(--accent-pink);
+    padding-bottom: 8px;
+}
+
+.sidebar-card ul {
+    padding-left: 18px;
+    margin: 0;
+}
+
+.sidebar-card li {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.sidebar-card p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Main Region Sections */
+main {
+    width: 100%;
+}
+
+.intro,
+.place-section,
+.suggest-section,
+.owner,
+.contact-section {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: var(--radius-main);
+    box-shadow: var(--shadow-soft);
+    border: 2px solid var(--border-soft);
+    margin-bottom: 24px;
+}
+
+@media (min-width: 700px) {
+    .intro,
+    .place-section,
+    .suggest-section,
+    .owner,
+    .contact-section {
+        padding: 35px;
+    }
+}
+
+.intro h2,
+.place-section h2,
+.suggest-section h2,
+.owner h2,
+.contact-section h2 {
+    color: var(--primary-brown);
+    font-size: 26px;
+    margin-top: 0;
+}
+
+/* Place Cards Grid Container */
+.places {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.place-card {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: var(--radius-main);
+    box-shadow: var(--shadow-soft);
+    border: 2px solid var(--border-soft);
+    transition: transform 0.2s ease;
+}
+
+.place-card:hover {
+    transform: translateY(-3px);
+}
+
+.place-card h3 {
+    color: var(--primary-brown);
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.place-card a {
+    display: inline-block;
+    background-color: var(--primary-brown);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-top: 12px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.place-card a:hover {
+    background-color: var(--soft-brown);
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--border-soft);
+    border-radius: 12px;
+    font-size: 15px;
+    background-color: var(--bg-cream);
+    color: var(--text-dark);
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: var(--primary-brown);
+}
+
+fieldset {
+    border: 2px solid var(--border-soft);
+    border-radius: 14px;
+    padding: 18px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--primary-brown);
+    padding: 0 8px;
+}
+
+.choice {
+    margin-bottom: 8px;
+}
+
+.choice label {
+    display: inline;
+    font-weight: normal;
+    margin-left: 6px;
+}
+
+button {
+    background-color: var(--primary-brown);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: var(--soft-brown);
+}
+
+.details {
+    padding-left: 20px;
+}
+
+.details li {
+    margin-bottom: 10px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--primary-brown);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.owner {
+    text-align: center;
+}
+
+.owner img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 20px auto 0;
+    border: 4px solid var(--accent-pink);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-list {
+    padding-left: 20px;
+}
+
+.contact-list li {
+    margin-bottom: 12px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: var(--primary-brown);
+    color: white;
+    padding: 20px;
+    border-radius: var(--radius-main);
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
